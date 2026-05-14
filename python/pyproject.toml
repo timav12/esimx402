@@ -1,0 +1,54 @@
+[project]
+name = "esimx402"
+version = "0.1.0"
+description = "Production x402 protocol client for buying eSIM data — no account, on-chain payment in USDC/USDT (Polygon, TON)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "eSIMx402 Team", email = "dev@esimx402.com" },
+]
+keywords = ["x402", "esim", "ai-agents", "http-402", "stablecoins", "polygon", "ton", "agentic-payments"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-httpx>=0.30",
+    "mypy>=1.10",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://esimx402.com"
+Documentation = "https://esimx402.com/docs"
+Source = "https://github.com/timav12/esimx402"
+Issues = "https://github.com/timav12/esimx402/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["esimx402"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+strict = true
+python_version = "3.10"

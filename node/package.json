@@ -1,0 +1,54 @@
+{
+  "name": "esimx402",
+  "version": "0.1.0",
+  "description": "Production x402 protocol client for buying eSIM data — no account, on-chain payment in USDC/USDT (Polygon, TON).",
+  "keywords": [
+    "x402",
+    "esim",
+    "ai-agents",
+    "http-402",
+    "stablecoins",
+    "polygon",
+    "ton",
+    "agentic-payments"
+  ],
+  "author": "eSIMx402 Team <dev@esimx402.com>",
+  "license": "MIT",
+  "homepage": "https://esimx402.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timav12/esimx402.git",
+    "directory": "node"
+  },
+  "bugs": {
+    "url": "https://github.com/timav12/esimx402/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test --import tsx 'src/**/*.test.ts'",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+.venv-*/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+*.tsbuildinfo
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node build output — we publish via `npm publish` which builds locally;
+# CI runs `npm run build` fresh. No reason to commit compiled JS.
+node/dist/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Secrets — should never appear here but defense-in-depth
+.env
+.env.*
+!.env.example
+*.pem
+*.key
