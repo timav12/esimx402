@@ -42,7 +42,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "node --test --import tsx 'src/**/*.test.ts'",
+    "test": "node --test --import tsx src/*.test.ts",
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
